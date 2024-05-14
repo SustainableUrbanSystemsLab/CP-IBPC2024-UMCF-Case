@@ -23,11 +23,15 @@ boundaryField
 {
     west
     {
-        #include "$FOAM_CASE/0/air/include/epsilon_bc_air"
+        type turbulentMixingLengthDissipationRateInlet;
+		mixingLength    10.0;   
+		value           uniform 0.1;
     }
     east
     {
-        #include "$FOAM_CASE/0/air/include/epsilon_bc_air"
+        type turbulentMixingLengthDissipationRateInlet;
+		mixingLength    10.0;   
+		value           uniform 0.1;
     }
     top
     {
@@ -43,11 +47,15 @@ boundaryField
     }
     north
     {
-        #include "$FOAM_CASE/0/air/include/epsilon_bc_air"
+        type turbulentMixingLengthDissipationRateInlet;
+		mixingLength    10.0;   
+		value           uniform 0.1;
     }
     south
     {
-        #include "$FOAM_CASE/0/air/include/epsilon_bc_air"
+        type turbulentMixingLengthDissipationRateInlet;
+		mixingLength    10.0;   
+		value           uniform 0.1;
     }
     buildings
     {

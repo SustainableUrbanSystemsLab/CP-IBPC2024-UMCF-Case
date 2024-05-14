@@ -35,7 +35,7 @@ solvers
 
 SIMPLE
 {
-    nNonOrthogonalCorrectors 0;
+    nNonOrthogonalCorrectors 2;
 
     residualControl
     {
@@ -60,8 +60,8 @@ relaxationFactors
     }
     equations
     {
-        U               0.7;
-        "(k|omega|epsilon).*" 0.7;
+        U               0.2;
+        "(k|omega|epsilon).*" 0.2;
     }
 }
 
