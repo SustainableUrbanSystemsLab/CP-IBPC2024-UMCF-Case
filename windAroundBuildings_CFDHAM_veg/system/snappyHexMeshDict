@@ -36,8 +36,8 @@ geometry
     refinementBox
     {
         type searchableBox;
-        min  (-360 -240  0);
-        max  ( 360  240  60);
+        min  (-386 -244  0);
+        max  ( 332  260  30);
     }
 };
 
@@ -75,16 +75,16 @@ castellatedMeshControls
         buildings
         {
             mode distance;
-            levels ((3.0 4)(10.0 3));  
+            levels ((1.0 4)(2.0 3));  
         }
         trees
         {
             mode distance;
-            levels ((1.0 5)(2.0 4));  
+            levels ((0.5 5)(1.0 4));  
         }
     }
 
-    locationInMesh (0 -100 10);
+    locationInMesh (0 -100 15);
 
     resolveFeatureAngle 10;
     allowFreeStandingZoneFaces true;
@@ -113,7 +113,7 @@ addLayersControls
         }
     }
 
-    relativeSizes       true;//false;
+    relativeSizes       false;
     expansionRatio      1.2;
     firstLayerThickness 0.15;
     minThickness        1e-3;

@@ -42,13 +42,11 @@ boundaryField
     }
     north
     {
-        type            calculated;
-        value           uniform 1e5; 
+        type            slip; 
     }
     south
     {
-        type            calculated;
-        value           uniform 1e5; 
+        type            slip; 
     }
     buildings
     {

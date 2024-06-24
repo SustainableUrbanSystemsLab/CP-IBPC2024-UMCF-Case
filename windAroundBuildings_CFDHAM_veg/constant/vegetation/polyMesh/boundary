@@ -2,7 +2,7 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  6
+    \\  /    A nd           | Version:  8
      \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
 FoamFile
@@ -21,8 +21,8 @@ FoamFile
     west
     {
         type            mappedPatch;
-        nFaces          2000;
-        startFace       5708152;
+        nFaces          530;
+        startFace       2922560;
         sampleMode      nearestPatchFace;
         sampleRegion    air;
         samplePatch     west;
@@ -33,8 +33,8 @@ FoamFile
     east
     {
         type            mappedPatch;
-        nFaces          2000;
-        startFace       5710152;
+        nFaces          530;
+        startFace       2923090;
         sampleMode      nearestPatchFace;
         sampleRegion    air;
         samplePatch     east;
@@ -45,8 +45,8 @@ FoamFile
     north
     {
         type            mappedPatch;
-        nFaces          2160;
-        startFace       5712152;
+        nFaces          870;
+        startFace       2923620;
         sampleMode      nearestPatchFace;
         sampleRegion    air;
         samplePatch     north;
@@ -57,8 +57,8 @@ FoamFile
     south
     {
         type            mappedPatch;
-        nFaces          2160;
-        startFace       5714312;
+        nFaces          870;
+        startFace       2924490;
         sampleMode      nearestPatchFace;
         sampleRegion    air;
         samplePatch     south;
@@ -69,9 +69,9 @@ FoamFile
     ground
     {
         type            mappedWall;
-        inGroups        1 ( wall );
-        nFaces          71241;
-        startFace       5716472;
+        inGroups        List<word> 0();
+        nFaces          57347;
+        startFace       2925360;
         sampleMode      nearestPatchFace;
         sampleRegion    air;
         samplePatch     ground;
@@ -82,8 +82,8 @@ FoamFile
     top
     {
         type            mappedPatch;
-        nFaces          10800;
-        startFace       5787713;
+        nFaces          4611;
+        startFace       2982707;
         sampleMode      nearestPatchFace;
         sampleRegion    air;
         samplePatch     top;
@@ -94,9 +94,9 @@ FoamFile
     buildings
     {
         type            mappedWall;
-        inGroups        1 ( wall );
-        nFaces          281466;
-        startFace       5798513;
+        inGroups        List<word> 0();
+        nFaces          299476;
+        startFace       2987318;
         sampleMode      nearestPatchFace;
         sampleRegion    air;
         samplePatch     buildings;
@@ -107,9 +107,9 @@ FoamFile
     air_to_vegetation
     {
         type            mappedWall;
-        inGroups        1 ( wall );
-        nFaces          50840;
-        startFace       6079979;
+        inGroups        List<word> 0();
+        nFaces          13403;
+        startFace       3286794;
         sampleMode      nearestCell;
         sampleRegion    air;
         offsetMode      uniform;

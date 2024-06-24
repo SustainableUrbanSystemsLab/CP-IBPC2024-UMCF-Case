@@ -2,7 +2,7 @@
   =========                 |
   \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
    \\    /   O peration     | Website:  https://openfoam.org
-    \\  /    A nd           | Version:  6
+    \\  /    A nd           | Version:  8
      \\/     M anipulation  |
 \*---------------------------------------------------------------------------*/
 FoamFile
@@ -21,52 +21,52 @@ FoamFile
     west
     {
         type            patch;
-        nFaces          2000;
-        startFace       5872388;
+        nFaces          530;
+        startFace       4936992;
     }
 
     east
     {
         type            patch;
-        nFaces          2000;
-        startFace       5874388;
+        nFaces          530;
+        startFace       4937522;
     }
 
     north
     {
         type            patch;
-        nFaces          2160;
-        startFace       5876388;
+        nFaces          870;
+        startFace       4938052;
     }
 
     south
     {
         type            patch;
-        nFaces          2160;
-        startFace       5878548;
+        nFaces          870;
+        startFace       4938922;
     }
 
     ground
     {
         type            wall;
-        inGroups        1 ( wall );
-        nFaces          65318;
-        startFace       5880708;
+        inGroups        List<word> 0();
+        nFaces          59451;
+        startFace       4939792;
     }
 
     top
     {
         type            patch;
-        nFaces          10800;
-        startFace       5946026;
+        nFaces          4611;
+        startFace       4999243;
     }
 
     buildings
     {
         type            mappedWall;
-        inGroups        1 ( wall );
-        nFaces          268450;
-        startFace       5956826;
+        inGroups        List<word> 0();
+        nFaces          269170;
+        startFace       5003854;
         sampleMode      nearestPatchFace;
         sampleRegion    buildings;
         samplePatch     buildings_to_air;

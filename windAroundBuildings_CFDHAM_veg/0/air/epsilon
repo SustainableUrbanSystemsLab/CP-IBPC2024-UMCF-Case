@@ -21,17 +21,16 @@ internalField   uniform 0.1;
 
 boundaryField
 {
+	#include "include/ABLConditions"
+
     west
     {
-        type turbulentMixingLengthDissipationRateInlet;
-		mixingLength    10.0;   
-		value           uniform 0.1;
+        type            zeroGradient;
     }
     east
     {
-        type turbulentMixingLengthDissipationRateInlet;
-		mixingLength    10.0;   
-		value           uniform 0.1;
+        type            atmBoundaryLayerInletEpsilon;
+        #include        "include/ABLConditions"
     }
     top
     {
@@ -47,15 +46,11 @@ boundaryField
     }
     north
     {
-        type turbulentMixingLengthDissipationRateInlet;
-		mixingLength    10.0;   
-		value           uniform 0.1;
+        type            slip;
     }
     south
     {
-        type turbulentMixingLengthDissipationRateInlet;
-		mixingLength    10.0;   
-		value           uniform 0.1;
+        type            slip;
     }
     buildings
     {

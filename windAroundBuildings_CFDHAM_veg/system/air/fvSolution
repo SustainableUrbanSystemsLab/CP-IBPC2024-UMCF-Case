@@ -53,9 +53,9 @@ solvers
 
 SIMPLE
 {
-    nNonOrthogonalCorrectors 2;
-    rhoMax          rhoMax [ 1 -3 0 0 0 ] 1.5;
-    rhoMin          rhoMin [ 1 -3 0 0 0 ] 0.9;
+    nNonOrthogonalCorrectors 0;
+    pMaxFactor               1.2;
+    pMinFactor               0.8;
 	
 	residualControl
     {
@@ -81,11 +81,11 @@ relaxationFactors
     }
     equations
     {
-        U               0.3;
-        "(h|e)"         0.5;
-        k               0.2;
-        epsilon         0.2;
-		w				0.5;
+        U               0.7;
+        "(h|e)"         0.9;
+        k               0.5;
+        epsilon         0.5;
+		w				0.9;
     }
 }
 

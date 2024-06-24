@@ -16,6 +16,19 @@ FoamFile
 
 surfaces ("buildings_refined.stl" "trees.stl");
 
+// Identify a feature when angle between faces < includedAngle
+includedAngle       90;
+
+subsetFeatures
+{
+    // Keep nonManifold edges (edges with >2 connected faces)
+    nonManifoldEdges       no;
+
+    // Keep open edges (edges with 1 connected face)
+    openEdges       yes;
+}
+
+
 #includeEtc "caseDicts/surface/surfaceFeaturesDict.cfg"
 
 // ************************************************************************* //

@@ -1,2 +1,2 @@
-cellSet FacadesRoofs new boxToCell (0.0 0.0 0.0)(250.0 160.0 60.0)
+cellSet FacadesRoofs new boxToCell (-386 -243 0)(332 259 29)
 cellZoneSet FacadesRoofs new setToCellZone FacadesRoofs

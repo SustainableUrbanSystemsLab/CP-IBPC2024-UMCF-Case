@@ -21,6 +21,9 @@ internalField   uniform 0.1;
 
 boundaryField
 {
+
+	#include "include/ABLConditions"
+	
     west
     {
         type            calculated;
@@ -38,18 +41,16 @@ boundaryField
     ground
     {
         type            nutkAtmRoughWallFunction;
-        z0              uniform 0.03;
+        z0              uniform 1.0;
         value           uniform 0.1;
     }
     north
     {
-        type            calculated;
-        value           uniform 0.1; 
+        type            slip; 
     }
     south
     {
-        type            calculated;
-        value           uniform 0.1; 
+        type            slip; 
     }
     buildings
     {

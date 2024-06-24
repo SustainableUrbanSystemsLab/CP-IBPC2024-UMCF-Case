@@ -23,13 +23,9 @@ boundaryField
 {
     west
     {
-        type            uniformFixedValue;
-        uniformValue    tableFile;
-        uniformValueCoeffs
-        {
-            file        "$FOAM_CASE/0/air/Tambient";
-        }
-        value           uniform 285.0; 
+        type            inletOutlet;
+        inletValue      uniform 297.0;
+        value           uniform 297.0; 
     }
     east
     {
@@ -39,42 +35,23 @@ boundaryField
         {
             file        "$FOAM_CASE/0/air/Tambient";
         }
-        value           uniform 285.0; 
+        value           uniform 297.0; 
     }
     top
     {
-        type            uniformFixedValue;
-        uniformValue    tableFile;
-        uniformValueCoeffs
-        {
-            file        "$FOAM_CASE/0/air/Tambient";
-        }
-        value           uniform 285.0; 
+        type            slip; 
     }
     ground
     {
-        type            fixedValue;
-        value           uniform 298.15;        
+        type            zeroGradient;        
     }
     north
     {
-        type            uniformFixedValue;
-        uniformValue    tableFile;
-        uniformValueCoeffs
-        {
-            file        "$FOAM_CASE/0/air/Tambient";
-        }
-        value           uniform 285.0; 
+        type            slip;
     }
     south
     {
-        type            uniformFixedValue;
-        uniformValue    tableFile;
-        uniformValueCoeffs
-        {
-            file        "$FOAM_CASE/0/air/Tambient";
-        }
-        value           uniform 285.0; 
+        type            slip; 
     }
     buildings
     {

@@ -17,17 +17,25 @@ FoamFile
 
 dimensions      [0 0 0 0 0 0 0];
 
-internalField   uniform 0.0075; 
+internalField   uniform 0.0076; 
 
 boundaryField
 {
     west
     {
-        #include "$FOAM_CASE/0/air/include/w_bc_air"
+        type            inletOutlet;
+        inletValue      uniform 0.0076;
+        value           uniform 0.0076;
     }
     east
     {
-        #include "$FOAM_CASE/0/air/include/w_bc_air"
+        type            uniformFixedValue;
+        uniformValue    tableFile;
+        uniformValueCoeffs
+        {
+            file        "$FOAM_CASE/0/air/wambient";
+        }
+        value           uniform 0.0076;
     }
     top
     {
@@ -35,21 +43,20 @@ boundaryField
     }
     ground
     {
-        type            fixedValue;
-        value           uniform 0.0075;
+        type            zeroGradient;
     }
     north
     {
-        #include "$FOAM_CASE/0/air/include/w_bc_air"
+        type            slip;
     }
     south
     {
-        #include "$FOAM_CASE/0/air/include/w_bc_air"
+        type            slip;
     }
     buildings
     {
         type            compressible::CFDHAMfluidMoistureCoupledImpermeable;
-        value           uniform 0.0075;
+        value           uniform 0.0076;
     }
 }
 

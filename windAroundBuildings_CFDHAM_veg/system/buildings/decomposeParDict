@@ -17,13 +17,13 @@ FoamFile
 
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-numberOfSubdomains  48;
+numberOfSubdomains  10;
 
-method          scotch;
+method          simple;
 
 simpleCoeffs
 {
-    n           (6 1 8);
+    n           (2 5 1);
     delta       0.001;
 }
 

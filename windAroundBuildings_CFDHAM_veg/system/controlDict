@@ -37,7 +37,7 @@ writeFormat     ascii;
 
 writePrecision  8;
 
-writeCompression off;
+writeCompression on;
 
 timeFormat      general;
 
@@ -45,7 +45,7 @@ timePrecision   12;
 
 runTimeModifiable true;
 
-/*functions
+functions
 {
     probes
     {   
@@ -62,16 +62,25 @@ runTimeModifiable true;
         writeInterval   10;  
 
         // Fields to be probed
-        fields          (T U); 
+        fields          (T U w); 
         region air;
 
         probeLocations
         (
-            (100.595 86.3716 2.0)
-            (119.398 86.1579 2.0)
+			(-269.0 19.0 5.0)
+			(-263.0 252.0 5.0)
+			(-83.0 30.0 5.0)
+			(13.0 -150.0 5.0)
+			(164.0 -137.0 28.0)
+			(204.0 36.0 20.0)
+			(222.0 -25.0 5.0)
+			(320.0 60.0 20.0)
+			
+            //(100.595 86.3716 2.0)
+            //(119.398 86.1579 2.0)
         );
     }    
-}*/
+}
 
 //urbanMicroclimateFoam controls
 
@@ -86,12 +95,12 @@ maxFluidIteration	1000;
 
 pcEqnForm    pc-based; //'pc-based' or 'mixed' - default is 'pc-based'
 
-blending true;
+/*blending true;
 blendingCoeffs
 {
     dampingThickness 60;
     alphaCoeffU 0.3;
     alphaCoeffT 0.1;
-}
+}*/
 
 // ************************************************************************* //

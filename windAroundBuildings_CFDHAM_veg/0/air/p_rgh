@@ -23,8 +23,7 @@ boundaryField
 {
     west
     {
-        type            fixedFluxPressure;
-        gradient        uniform 0; 
+        type            fixedValue;
         value           uniform 1e5; 
     }
     east
@@ -35,8 +34,7 @@ boundaryField
     }
     top
     {
-        type            fixedValue;
-        value           uniform 101325;
+        type            slip;
     }
     ground
     {
@@ -46,15 +44,11 @@ boundaryField
     }
     north
     {
-        type            fixedFluxPressure;
-        gradient        uniform 0; 
-        value           uniform 1e5; 
+        type            slip; 
     }
     south
     {
-        type            fixedFluxPressure;
-        gradient        uniform 0; 
-        value           uniform 1e5; 
+        type            slip; 
     }
     buildings
     {

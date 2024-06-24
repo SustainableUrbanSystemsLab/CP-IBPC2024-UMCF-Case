@@ -17,17 +17,21 @@ FoamFile
 
 dimensions      [0 2 -2 0 0 0 0];
 
-internalField   uniform 0.1; 
+internalField   uniform 1.2; 
 
 boundaryField
 {
+
+	#include "include/ABLConditions"
+	
     west
     {
-        #include "$FOAM_CASE/0/air/include/k_bc_air"
+        type            zeroGradient;
     }
     east
     {
-        #include "$FOAM_CASE/0/air/include/k_bc_air"
+        type            atmBoundaryLayerInletK;
+        #include        "include/ABLConditions"
     }
     top
     {
@@ -36,20 +40,20 @@ boundaryField
     ground
     {
         type            kqRWallFunction;
-        value           uniform 0.1; 
+        value           uniform 1.2; 
     }
     north
     {
-        #include "$FOAM_CASE/0/air/include/k_bc_air"
+        type            slip;
     }
     south
     {
-        #include "$FOAM_CASE/0/air/include/k_bc_air"
+        type            slip;
     }
     buildings
     {
         type            kqRWallFunction;
-        value           uniform 0.1; 
+        value           uniform 1.2; 
     }
 }
 
