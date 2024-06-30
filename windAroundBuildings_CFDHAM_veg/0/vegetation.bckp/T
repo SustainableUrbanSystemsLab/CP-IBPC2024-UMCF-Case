@@ -17,7 +17,7 @@ FoamFile
 
 dimensions      [0 0 0 1 0 0 0];
 
-internalField   uniform 297;
+internalField   uniform 299;
 
 boundaryField
 {
@@ -28,7 +28,7 @@ boundaryField
         setAverage      0;
         average         0;
         interpolationScheme cell;
-        value           uniform 297;
+        value           uniform 299;
     }
     east
     {
@@ -37,7 +37,7 @@ boundaryField
         setAverage      0;
         average         0;
         interpolationScheme cell;
-        value           uniform 297;
+        value           uniform 299;
     }
     north
     {
@@ -46,7 +46,7 @@ boundaryField
         setAverage      0;
         average         0;
         interpolationScheme cell;
-        value           uniform 297;
+        value           uniform 299;
     }
     south
     {
@@ -55,7 +55,7 @@ boundaryField
         setAverage      0;
         average         0;
         interpolationScheme cell;
-        value           uniform 297;
+        value           uniform 299;
     }
     ground
     {
@@ -64,7 +64,7 @@ boundaryField
         setAverage      0;
         average         0;
         interpolationScheme cell;
-        value           uniform 297;
+        value           uniform 299;
     }
     top
     {
@@ -73,7 +73,7 @@ boundaryField
         setAverage      0;
         average         0;
         interpolationScheme cell;
-        value           uniform 297;
+        value           uniform 299;
     }
     buildings
     {
@@ -82,7 +82,7 @@ boundaryField
         setAverage      0;
         average         0;
         interpolationScheme cell;
-        value           uniform 297;
+        value           uniform 299;
     }
     air_to_vegetation
     {
@@ -91,7 +91,7 @@ boundaryField
         setAverage      0;  
         average         0;
         interpolationScheme cell;
-        value           uniform 297;
+        value           uniform 299;
     }
 }
 

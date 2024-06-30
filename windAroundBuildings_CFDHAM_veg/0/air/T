@@ -24,8 +24,8 @@ boundaryField
     west
     {
         type            inletOutlet;
-        inletValue      uniform 297.0;
-        value           uniform 297.0; 
+        inletValue      uniform 299.0;
+        value           uniform 299.0; 
     }
     east
     {
@@ -35,7 +35,7 @@ boundaryField
         {
             file        "$FOAM_CASE/0/air/Tambient";
         }
-        value           uniform 297.0; 
+        value           uniform 299.0; 
     }
     top
     {
