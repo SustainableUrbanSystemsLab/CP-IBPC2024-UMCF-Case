@@ -1,0 +1,122 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     0.0;
+    format      ascii;
+    class       polyBoundaryMesh;
+    location    "constant/vegetation/polyMesh";
+    object      boundary;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+
+8
+(
+    west
+    {
+        type            mappedPatch;
+        nFaces          530;
+        startFace       2922560;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     west;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+
+    east
+    {
+        type            mappedPatch;
+        nFaces          530;
+        startFace       2923090;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     east;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+
+    north
+    {
+        type            mappedPatch;
+        nFaces          870;
+        startFace       2923620;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     north;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+
+    south
+    {
+        type            mappedPatch;
+        nFaces          870;
+        startFace       2924490;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     south;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+
+    ground
+    {
+        type            mappedWall;
+        inGroups        List<word> 0();
+        nFaces          57347;
+        startFace       2925360;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     ground;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+
+    top
+    {
+        type            mappedPatch;
+        nFaces          4611;
+        startFace       2982707;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     top;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+
+    buildings
+    {
+        type            mappedWall;
+        inGroups        List<word> 0();
+        nFaces          299476;
+        startFace       2987318;
+        sampleMode      nearestPatchFace;
+        sampleRegion    air;
+        samplePatch     buildings;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+
+    air_to_vegetation
+    {
+        type            mappedWall;
+        inGroups        List<word> 0();
+        nFaces          13403;
+        startFace       3286794;
+        sampleMode      nearestCell;
+        sampleRegion    air;
+        offsetMode      uniform;
+        offset          ( 0 0 0 );
+    }
+
+)
+
+
+// ************************************************************************* //

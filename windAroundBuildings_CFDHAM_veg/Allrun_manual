@@ -1,0 +1,17 @@
+#!/bin/sh
+cd ${0%/*} || exit 1    # run from this directory
+
+
+echo "Decomposing"
+decomposePar -force -allRegions
+
+
+echo "Initializing radiation models"
+mpirun -np 40 --oversubscribe faceAgglomerate -region vegetation -parallel
+mpirun -np 40 --oversubscribe calcLAI -region air -parallel
+mpirun -np 40 --oversubscribe viewFactorsGen -region vegetation -parallel
+mpirun -np 40 --oversubscribe solarRayTracingGen -region vegetation -parallel
+echo "Running solver"
+mpirun -np 40 --oversubscribe urbanMicroclimateFoam -parallel 
+
+# ----------------------------------------------------------------- end-of-file
