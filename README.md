@@ -1,6 +1,6 @@
 # Conference-IBPC2024-UMCF-Case
 
-Simulation Process
+
 
 # Introduction
 
