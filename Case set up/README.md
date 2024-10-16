@@ -1,6 +1,10 @@
 # Conference-IBPC2024-UMCF-Case
 
+In this research, we used *urbanMicroclimateFoam*, an open-source solver for coupled physical processes modeling urban microclimate based on OpenFOAM. 
 
+[Link to solver](https://gitlab.ethz.ch/openfoam-cbp/solvers/urbanmicroclimatefoam) 
+
+[Link to solver's wiki](https://gitlab.ethz.ch/openfoam-cbp/solvers/urbanmicroclimatefoam/-/wikis/home) 
 
 # Introduction
 
