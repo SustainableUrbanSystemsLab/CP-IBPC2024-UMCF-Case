@@ -82,4 +82,4 @@ Note that you can change the mesh settings by changing the parameters of sanppyh
 ```
 # Source
 
-[Link](https://github.com/SustainableUrbanSystemsLab/CP-IBPC2024-UMCF-Case/tree/main) to this repository.
+[Link](https://www.researchgate.net/publication/384972164_Assessing_the_Complexity_Required_for_Enhancing_Eddy3D_Validation_of_urbanMicroclimateFoam_for_Urban_Heat_Island_Mitigation) to the paper.
